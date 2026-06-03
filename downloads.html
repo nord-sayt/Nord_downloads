@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>دانلودها | NORD FILES</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+
+<div class="logo">
+⚡ NORD FILES
+</div>
+
+<nav>
+
+<a href="index.html">خانه</a>
+<a href="downloads.html">دانلودها</a>
+<a href="gallery.html">گالری</a>
+<a href="news.html">اخبار</a>
+<a href="support.html">پشتیبانی</a>
+
+</nav>
+
+</header>
+
+<section class="downloads-header">
+
+<h1>📦 مرکز دانلود</h1>
+
+<p>
+
+دانلود برنامه، بازی، ابزار و آموزش
+
+</p>
+
+</section>
+
+<section class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="جستجو در فایل‌ها..."
+onkeyup="searchFiles()"
+>
+
+</section>
+
+<section class="downloads-grid" id="downloadsGrid">
+
+<div class="download-card">
+
+<h2>🎮 GTA V</h2>
+
+<p>
+
+نسخه فشرده بازی GTA V
+
+</p>
+
+<a href="#" class="download-btn">
+
+📥 دانلود
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h2>💻 Visual Studio Code</h2>
+
+<p>
+
+ویرایشگر حرفه‌ای برنامه‌نویسی
+
+</p>
+
+<a href="#" class="download-btn">
+
+📥 دانلود
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h2>📱 Telegram Desktop</h2>
+
+<p>
+
+نسخه ویندوز تلگرام
+
+</p>
+
+<a href="#" class="download-btn">
+
+📥 دانلود
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h2>🎨 Photoshop</h2>
+
+<p>
+
+ویرایش تصاویر حرفه‌ای
+
+</p>
+
+<a href="#" class="download-btn">
+
+📥 دانلود
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h2>📚 آموزش HTML</h2>
+
+<p>
+
+آموزش کامل طراحی سایت
+
+</p>
+
+<a href="#" class="download-btn">
+
+📥 دانلود
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h2>⚙️ WinRAR</h2>
+
+<p>
+
+فشرده‌سازی فایل‌ها
+
+</p>
+
+<a href="#" class="download-btn">
+
+📥 دانلود
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+📢 کانال بله:
+@meghnatis_shohada
+
+<br><br>
+
+© 2026 NORD FILES
+
+</footer>
+
+<script>
+
+function searchFiles(){
+
+let input =
+document.getElementById(
+"searchInput"
+).value.toLowerCase();
+
+let cards =
+document.querySelectorAll(
+".download-card"
+);
+
+cards.forEach(card=>{
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
