@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>گالری | NORD FILES</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+
+<div class="logo">
+⚡ NORD FILES
+</div>
+
+<nav>
+
+<a href="index.html">خانه</a>
+<a href="downloads.html">دانلودها</a>
+<a href="gallery.html">گالری</a>
+<a href="news.html">اخبار</a>
+<a href="support.html">پشتیبانی</a>
+
+</nav>
+
+</header>
+
+<section class="gallery-header">
+
+<h1>🖼️ گالری تصاویر</h1>
+
+<p>
+
+تصاویر فایل‌ها و محتوای سایت
+
+</p>
+
+</section>
+
+<section class="gallery-grid">
+
+<img src="images/server1.jpg" onclick="openImage(this.src)">
+<img src="images/server2.jpg" onclick="openImage(this.src)">
+<img src="images/server3.jpg" onclick="openImage(this.src)">
+<img src="images/server4.jpg" onclick="openImage(this.src)">
+<img src="images/server5.jpg" onclick="openImage(this.src)">
+<img src="images/server6.jpg" onclick="openImage(this.src)">
+
+</section>
+
+<div id="lightbox">
+
+<span onclick="closeImage()">
+✖
+</span>
+
+<img id="lightbox-img">
+
+</div>
+
+<footer>
+
+📢 کانال بله:
+@meghnatis_shohada
+
+<br><br>
+
+© 2026 NORD FILES
+
+</footer>
+
+<script>
+
+function openImage(src){
+
+document.getElementById(
+"lightbox"
+).style.display="flex";
+
+document.getElementById(
+"lightbox-img"
+).src=src;
+
+}
+
+function closeImage(){
+
+document.getElementById(
+"lightbox"
+).style.display="none";
+
+}
+
+</script>
+
+</body>
+
+</html>
