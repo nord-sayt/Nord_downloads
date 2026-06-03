@@ -1,0 +1,225 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Vazirmatn',sans-serif;
+}
+
+body{
+background:#070b16;
+color:white;
+overflow-x:hidden;
+min-height:100vh;
+}
+
+.background{
+position:fixed;
+width:100%;
+height:100%;
+background:
+linear-gradient(
+135deg,
+#08111f,
+#0e1f3d,
+#111827,
+#0f172a
+);
+background-size:400% 400%;
+animation:bg 15s ease infinite;
+z-index:-2;
+}
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:25px 60px;
+
+backdrop-filter:blur(15px);
+
+background:rgba(255,255,255,.05);
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:800;
+
+color:#4cc9ff;
+
+text-shadow:
+0 0 15px #4cc9ff,
+0 0 40px #4cc9ff;
+
+}
+
+nav{
+
+display:flex;
+gap:20px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#4cc9ff;
+
+}
+
+.hero{
+
+text-align:center;
+
+padding:140px 20px;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+text-shadow:
+0 0 20px #4cc9ff,
+0 0 50px #4cc9ff;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+opacity:.8;
+
+margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 35px;
+
+border-radius:15px;
+
+background:#18253d;
+
+color:white;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.glow{
+
+background:#4cc9ff;
+
+color:black;
+
+box-shadow:
+0 0 20px #4cc9ff,
+0 0 50px #4cc9ff;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+padding:60px;
+
+}
+
+.card{
+
+padding:30px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.1);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 25px rgba(76,201,255,.4);
+
+}
+
+.card h2{
+
+margin-bottom:15px;
+
+color:#4cc9ff;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:40px;
+
+opacity:.7;
+
+}
