@@ -1,91 +1,33 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<section class="container section">
 
-<head>
+<h2>آخرین اخبار</h2>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div id="news-container" class="grid">
 
-<title>اخبار | NORD FILES</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-<div class="background"></div>
-
-<header>
-
-<div class="logo">
-⚡ NORD FILES
 </div>
 
-<nav>
-
-<a href="index.html">خانه</a>
-<a href="downloads.html">دانلودها</a>
-<a href="gallery.html">گالری</a>
-<a href="news.html">اخبار</a>
-<a href="support.html">پشتیبانی</a>
-
-</nav>
-
-</header>
-
-<section class="news-header">
-
-<h1>📰 اخبار سایت</h1>
-
-<p>
-
-آخرین اطلاعیه‌ها و بروزرسانی‌ها
-
-</p>
-
 </section>
-
-<section id="news-container"
-class="news-grid">
-
-</section>
-
-<footer>
-
-📢 کانال بله:
-@meghnatis_shohada
-
-<br><br>
-
-© 2026 NORD FILES
-
-</footer>
 
 <script>
 
 fetch("news.json")
 
-.then(response => response.json())
+.then(res=>res.json())
 
-.then(data => {
+.then(data=>{
 
 const container =
 document.getElementById(
 "news-container"
 );
 
-data.forEach(news => {
+data.forEach(news=>{
 
 container.innerHTML += `
 
-<div class="news-card">
+<div class="card">
 
-<h2>${news.title}</h2>
-
-<span>${news.date}</span>
+<h3>${news.title}</h3>
 
 <p>${news.text}</p>
 
@@ -98,7 +40,3 @@ container.innerHTML += `
 });
 
 </script>
-
-</body>
-
-</html>
