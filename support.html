@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>پشتیبانی | NORD FILES</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+
+<div class="logo">
+⚡ NORD FILES
+</div>
+
+<nav>
+
+<a href="index.html">خانه</a>
+<a href="downloads.html">دانلودها</a>
+<a href="gallery.html">گالری</a>
+<a href="news.html">اخبار</a>
+<a href="support.html">پشتیبانی</a>
+
+</nav>
+
+</header>
+
+<section class="support-header">
+
+<h1>💬 پشتیبانی</h1>
+
+<p>
+پیام خود را برای ما ارسال کنید
+</p>
+
+</section>
+
+<section class="support-container">
+
+<div class="support-card">
+
+<input
+type="text"
+id="name"
+placeholder="نام شما"
+>
+
+<input
+type="text"
+id="subject"
+placeholder="موضوع"
+>
+
+<textarea
+id="message"
+placeholder="متن پیام..."
+></textarea>
+
+<button onclick="sendMessage()">
+ارسال پیام
+</button>
+
+<div id="successBox">
+✅ پیام شما ثبت شد
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+📢 کانال بله:
+@meghnatis_shohada
+
+<br><br>
+
+© 2026 NORD FILES
+
+</footer>
+
+<script>
+
+function sendMessage(){
+
+const name =
+document.getElementById("name").value;
+
+const subject =
+document.getElementById("subject").value;
+
+const message =
+document.getElementById("message").value;
+
+if(
+name.trim()==="" ||
+subject.trim()==="" ||
+message.trim()===""
+){
+
+alert("همه فیلدها را پر کنید");
+return;
+
+}
+
+const data = {
+
+name:name,
+subject:subject,
+message:message,
+date:new Date().toLocaleString()
+
+};
+
+let messages =
+JSON.parse(
+localStorage.getItem("supportMessages")
+) || [];
+
+messages.push(data);
+
+localStorage.setItem(
+"supportMessages",
+JSON.stringify(messages)
+);
+
+document.getElementById("successBox")
+.style.display="block";
+
+document.getElementById("name").value="";
+document.getElementById("subject").value="";
+document.getElementById("message").value="";
+
+setTimeout(()=>{
+
+document.getElementById("successBox")
+.style.display="none";
+
+},3000);
+
+}
+
+</script>
+
+</body>
+
+</html>
