@@ -1,15 +1,18 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NORD FILES</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,63 +27,178 @@
 
 <nav>
 
-<a href="#">خانه</a>
-<a href="#">دانلودها</a>
-<a href="#">گالری</a>
-<a href="#">اخبار</a>
-<a href="#">پشتیبانی</a>
+<a href="index.html">خانه</a>
+<a href="downloads.html">دانلودها</a>
+<a href="gallery.html">گالری</a>
+<a href="news.html">اخبار</a>
+<a href="support.html">پشتیبانی</a>
 
 </nav>
+
+<button id="themeBtn">
+🌙
+</button>
 
 </header>
 
 <section class="hero">
 
-<h1>مرکز دانلود NORD</h1>
+<h1>NORD FILES</h1>
 
 <p>
-دانلود برنامه، بازی، آموزش و ابزار با سرعت بالا
+
+مرکز دانلود فایل، برنامه، بازی و آموزش
+
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="btn">
+<a href="downloads.html" class="btn">
+
 📥 دانلودها
+
 </a>
 
 <a href="https://ble.ir/meghnatis_shohada" class="btn glow">
+
 📢 کانال بله
+
 </a>
 
 </div>
+
+</section>
+
+<section class="slider">
+
+<img
+id="sliderImage"
+src="images/server1.jpg"
+alt="slider">
 
 </section>
 
 <section class="cards">
 
 <div class="card">
+
 <h2>📦 دانلودها</h2>
-<p>آخرین فایل‌های منتشر شده</p>
+
+<p>
+
+دسترسی سریع به فایل‌ها
+
+</p>
+
 </div>
 
 <div class="card">
+
 <h2>📰 اخبار</h2>
-<p>آخرین اطلاعیه‌های سایت</p>
+
+<p>
+
+آخرین بروزرسانی‌ها
+
+</p>
+
 </div>
 
 <div class="card">
+
 <h2>🖼️ گالری</h2>
-<p>تصاویر و پیش‌نمایش‌ها</p>
+
+<p>
+
+تصاویر و پیش نمایش‌ها
+
+</p>
+
 </div>
 
 </section>
 
 <footer>
 
+📢 کانال بله:
+@meghnatis_shohada
+
+<br><br>
+
 © 2026 NORD FILES
 
 </footer>
 
+<script>
+
+const images=[
+
+"images/server1.jpg",
+"images/server2.jpg",
+"images/server3.jpg",
+"images/server4.jpg",
+"images/server5.jpg",
+"images/server6.jpg"
+
+];
+
+let current=0;
+
+setInterval(()=>{
+
+current++;
+
+if(current>=images.length)
+current=0;
+
+document.getElementById(
+"sliderImage"
+).src=
+images[current];
+
+},3000);
+
+const btn =
+document.getElementById(
+"themeBtn"
+);
+
+if(localStorage.getItem("theme")==="light"){
+
+document.body.classList.add("light");
+btn.innerText="☀️";
+
+}
+
+btn.onclick=()=>{
+
+document.body.classList.toggle("light");
+
+if(document.body.classList.contains("light")){
+
+localStorage.setItem(
+"theme",
+"light"
+);
+
+btn.innerText="☀️";
+
+}else{
+
+localStorage.setItem(
+"theme",
+"dark"
+);
+
+btn.innerText="🌙";
+
+}
+
+};
+
+</script>
+
 </body>
 
 </html>
+```
