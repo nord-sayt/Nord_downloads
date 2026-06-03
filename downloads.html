@@ -4,76 +4,101 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>دانلودها | NORD FILES</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<div class="background"></div>
-
 <header>
 
 <div class="logo">
-⚡ NORD FILES
+
+NORD FILES
+
 </div>
 
 <nav>
 
 <a href="index.html">خانه</a>
+
 <a href="downloads.html">دانلودها</a>
-<a href="gallery.html">گالری</a>
+
 <a href="news.html">اخبار</a>
+
+<a href="gallery.html">گالری</a>
+
 <a href="support.html">پشتیبانی</a>
 
 </nav>
 
 </header>
 
-<section class="downloads-header">
+<section class="downloads-hero">
 
-<h1>📦 مرکز دانلود</h1>
+<h1>مرکز دانلود NORD</h1>
 
 <p>
 
-دانلود برنامه، بازی، ابزار و آموزش
+جدیدترین فایل‌ها، برنامه‌ها و ابزارها
 
 </p>
-
-</section>
-
-<section class="search-box">
 
 <input
 type="text"
-id="searchInput"
-placeholder="جستجو در فایل‌ها..."
-onkeyup="searchFiles()"
->
+id="searchBox"
+placeholder="جستجوی فایل...">
 
 </section>
 
-<section class="downloads-grid" id="downloadsGrid">
+<section class="categories">
+
+<button class="cat-btn">همه</button>
+
+<button class="cat-btn">برنامه</button>
+
+<button class="cat-btn">بازی</button>
+
+<button class="cat-btn">آموزش</button>
+
+<button class="cat-btn">ابزار</button>
+
+</section>
+
+<section class="downloads-grid">
 
 <div class="download-card">
 
-<h2>🎮 GTA V</h2>
+<div class="file-icon">
+
+📦
+
+</div>
+
+<h3>Photoshop 2026</h3>
 
 <p>
 
-نسخه فشرده بازی GTA V
+نسخه کامل فتوشاپ
 
 </p>
 
+<div class="meta">
+
+<span>2.4GB</span>
+
+<span>v26.1</span>
+
+</div>
+
 <a href="#" class="download-btn">
 
-📥 دانلود
+دانلود
 
 </a>
 
@@ -81,17 +106,31 @@ onkeyup="searchFiles()"
 
 <div class="download-card">
 
-<h2>💻 Visual Studio Code</h2>
+<div class="file-icon">
+
+💻
+
+</div>
+
+<h3>Visual Studio Code</h3>
 
 <p>
 
-ویرایشگر حرفه‌ای برنامه‌نویسی
+ویرایشگر حرفه‌ای
 
 </p>
 
+<div class="meta">
+
+<span>120MB</span>
+
+<span>v1.110</span>
+
+</div>
+
 <a href="#" class="download-btn">
 
-📥 دانلود
+دانلود
 
 </a>
 
@@ -99,71 +138,31 @@ onkeyup="searchFiles()"
 
 <div class="download-card">
 
-<h2>📱 Telegram Desktop</h2>
+<div class="file-icon">
 
-<p>
-
-نسخه ویندوز تلگرام
-
-</p>
-
-<a href="#" class="download-btn">
-
-📥 دانلود
-
-</a>
+🎮
 
 </div>
 
-<div class="download-card">
-
-<h2>🎨 Photoshop</h2>
+<h3>Minecraft</h3>
 
 <p>
 
-ویرایش تصاویر حرفه‌ای
+نسخه Java Edition
 
 </p>
 
-<a href="#" class="download-btn">
+<div class="meta">
 
-📥 دانلود
+<span>850MB</span>
 
-</a>
+<span>v1.21</span>
 
 </div>
 
-<div class="download-card">
-
-<h2>📚 آموزش HTML</h2>
-
-<p>
-
-آموزش کامل طراحی سایت
-
-</p>
-
 <a href="#" class="download-btn">
 
-📥 دانلود
-
-</a>
-
-</div>
-
-<div class="download-card">
-
-<h2>⚙️ WinRAR</h2>
-
-<p>
-
-فشرده‌سازی فایل‌ها
-
-</p>
-
-<a href="#" class="download-btn">
-
-📥 دانلود
+دانلود
 
 </a>
 
@@ -173,47 +172,55 @@ onkeyup="searchFiles()"
 
 <footer>
 
-📢 کانال بله:
+<p>
+
+NORD FILES © 2026
+
+</p>
+
+<p>
+
+کانال بله:
 @meghnatis_shohada
 
-<br><br>
-
-© 2026 NORD FILES
+</p>
 
 </footer>
 
 <script>
 
-function searchFiles(){
-
-let input =
+const searchBox =
 document.getElementById(
-"searchInput"
-).value.toLowerCase();
-
-let cards =
-document.querySelectorAll(
-".download-card"
+"searchBox"
 );
 
-cards.forEach(card=>{
+searchBox.addEventListener(
+"keyup",
+()=>{
 
-let text =
-card.innerText.toLowerCase();
+const value =
+searchBox.value
+.toLowerCase();
 
-if(text.includes(input)){
+document
+.querySelectorAll(
+".download-card"
+)
 
-card.style.display="block";
+.forEach(card=>{
 
-}else{
+card.style.display =
 
-card.style.display="none";
+card.innerText
+.toLowerCase()
+.includes(value)
 
-}
+? "block"
+: "none";
 
 });
 
-}
+});
 
 </script>
 
