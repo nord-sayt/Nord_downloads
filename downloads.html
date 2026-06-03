@@ -1,229 +1,60 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<section class="container section">
 
-<head>
+<h2>آخرین دانلودها</h2>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>دانلودها | NORD FILES</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-
-NORD FILES
-
-</div>
-
-<nav>
-
-<a href="index.html">خانه</a>
-
-<a href="downloads.html">دانلودها</a>
-
-<a href="news.html">اخبار</a>
-
-<a href="gallery.html">گالری</a>
-
-<a href="support.html">پشتیبانی</a>
-
-</nav>
-
-</header>
-
-<section class="downloads-hero">
-
-<h1>مرکز دانلود NORD</h1>
-
-<p>
-
-جدیدترین فایل‌ها، برنامه‌ها و ابزارها
-
-</p>
-
-<input
-type="text"
-id="searchBox"
-placeholder="جستجوی فایل...">
-
-</section>
-
-<section class="categories">
-
-<button class="cat-btn">همه</button>
-
-<button class="cat-btn">برنامه</button>
-
-<button class="cat-btn">بازی</button>
-
-<button class="cat-btn">آموزش</button>
-
-<button class="cat-btn">ابزار</button>
-
-</section>
-
-<section class="downloads-grid">
+<div class="downloads-grid">
 
 <div class="download-card">
 
-<div class="file-icon">
-
-📦
-
-</div>
+<div class="file-icon">📦</div>
 
 <h3>Photoshop 2026</h3>
 
-<p>
-
-نسخه کامل فتوشاپ
-
-</p>
+<p>نسخه کامل فتوشاپ</p>
 
 <div class="meta">
-
-<span>2.4GB</span>
-
+<span>2.4 GB</span>
 <span>v26.1</span>
-
 </div>
 
-<a href="#" class="download-btn">
-
-دانلود
-
-</a>
+<a href="#" class="btn">دانلود</a>
 
 </div>
 
 <div class="download-card">
 
-<div class="file-icon">
+<div class="file-icon">💻</div>
 
-💻
+<h3>VS Code</h3>
 
-</div>
-
-<h3>Visual Studio Code</h3>
-
-<p>
-
-ویرایشگر حرفه‌ای
-
-</p>
+<p>ویرایشگر حرفه‌ای برنامه‌نویسی</p>
 
 <div class="meta">
-
-<span>120MB</span>
-
+<span>120 MB</span>
 <span>v1.110</span>
-
 </div>
 
-<a href="#" class="download-btn">
-
-دانلود
-
-</a>
+<a href="#" class="btn">دانلود</a>
 
 </div>
 
 <div class="download-card">
 
-<div class="file-icon">
+<div class="file-icon">📁</div>
 
-🎮
+<h3>WinRAR</h3>
 
-</div>
-
-<h3>Minecraft</h3>
-
-<p>
-
-نسخه Java Edition
-
-</p>
+<p>فشرده سازی فایل‌ها</p>
 
 <div class="meta">
-
-<span>850MB</span>
-
-<span>v1.21</span>
-
+<span>4 MB</span>
+<span>v7.10</span>
 </div>
 
-<a href="#" class="download-btn">
+<a href="#" class="btn">دانلود</a>
 
-دانلود
-
-</a>
+</div>
 
 </div>
 
 </section>
-
-<footer>
-
-<p>
-
-NORD FILES © 2026
-
-</p>
-
-<p>
-
-کانال بله:
-@meghnatis_shohada
-
-</p>
-
-</footer>
-
-<script>
-
-const searchBox =
-document.getElementById(
-"searchBox"
-);
-
-searchBox.addEventListener(
-"keyup",
-()=>{
-
-const value =
-searchBox.value
-.toLowerCase();
-
-document
-.querySelectorAll(
-".download-card"
-)
-
-.forEach(card=>{
-
-card.style.display =
-
-card.innerText
-.toLowerCase()
-.includes(value)
-
-? "block"
-: "none";
-
-});
-
-});
-
-</script>
-
-</body>
-
-</html>
