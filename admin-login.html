@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ورود مدیر | NORD FILES</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="login-box">
+
+<h1>🔒 ورود مدیر</h1>
+
+<input
+type="text"
+id="username"
+placeholder="نام کاربری">
+
+<input
+type="password"
+id="password"
+placeholder="رمز عبور">
+
+<button onclick="login()">
+ورود
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+const user =
+document.getElementById("username").value;
+
+const pass =
+document.getElementById("password").value;
+
+if(
+user === "admin" &&
+pass === "nord2026"
+){
+
+localStorage.setItem(
+"adminLogged",
+"true"
+);
+
+window.location =
+"admin.html";
+
+}
+else{
+
+document.getElementById(
+"error"
+).innerText =
+"نام کاربری یا رمز اشتباه است";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
