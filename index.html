@@ -1,118 +1,93 @@
-```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NORD FILES</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<div class="background"></div>
-
 <header>
 
 <div class="logo">
-⚡ NORD FILES
+NORD FILES
 </div>
 
 <nav>
-
 <a href="index.html">خانه</a>
 <a href="downloads.html">دانلودها</a>
-<a href="gallery.html">گالری</a>
 <a href="news.html">اخبار</a>
+<a href="gallery.html">گالری</a>
 <a href="support.html">پشتیبانی</a>
-
 </nav>
-
-<button id="themeBtn">
-🌙
-</button>
 
 </header>
 
 <section class="hero">
 
-<h1>NORD FILES</h1>
+<h1>دانلود فایل‌های مورد نیاز</h1>
 
 <p>
-
-مرکز دانلود فایل، برنامه، بازی و آموزش
-
+سریع، ساده و بدون دردسر
 </p>
-
-<div class="hero-buttons">
 
 <a href="downloads.html" class="btn">
-
-📥 دانلودها
-
+مشاهده دانلودها
 </a>
 
-<a href="https://ble.ir/meghnatis_shohada" class="btn glow">
+</section>
 
-📢 کانال بله
+<section class="section">
 
-</a>
+<h2>آخرین فایل‌ها</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>فایل نمونه 1</h3>
+<p>توضیحات فایل</p>
+<a href="#" class="download-btn">دانلود</a>
+</div>
+
+<div class="card">
+<h3>فایل نمونه 2</h3>
+<p>توضیحات فایل</p>
+<a href="#" class="download-btn">دانلود</a>
+</div>
+
+<div class="card">
+<h3>فایل نمونه 3</h3>
+<p>توضیحات فایل</p>
+<a href="#" class="download-btn">دانلود</a>
+</div>
 
 </div>
 
 </section>
 
-<section class="slider">
+<section class="section">
 
-<img
-id="sliderImage"
-src="images/server1.jpg"
-alt="slider">
+<h2>آخرین اخبار</h2>
 
-</section>
-
-<section class="cards">
+<div class="grid">
 
 <div class="card">
-
-<h2>📦 دانلودها</h2>
-
-<p>
-
-دسترسی سریع به فایل‌ها
-
-</p>
-
+<h3>خبر شماره 1</h3>
+<p>متن خبر...</p>
 </div>
 
 <div class="card">
-
-<h2>📰 اخبار</h2>
-
-<p>
-
-آخرین بروزرسانی‌ها
-
-</p>
-
+<h3>خبر شماره 2</h3>
+<p>متن خبر...</p>
 </div>
-
-<div class="card">
-
-<h2>🖼️ گالری</h2>
-
-<p>
-
-تصاویر و پیش نمایش‌ها
-
-</p>
 
 </div>
 
@@ -120,85 +95,15 @@ alt="slider">
 
 <footer>
 
-📢 کانال بله:
+<p>NORD FILES © 2026</p>
+
+<p>
+کانال بله:
 @meghnatis_shohada
-
-<br><br>
-
-© 2026 NORD FILES
+</p>
 
 </footer>
-
-<script>
-
-const images=[
-
-"images/server1.jpg",
-"images/server2.jpg",
-"images/server3.jpg",
-"images/server4.jpg",
-"images/server5.jpg",
-"images/server6.jpg"
-
-];
-
-let current=0;
-
-setInterval(()=>{
-
-current++;
-
-if(current>=images.length)
-current=0;
-
-document.getElementById(
-"sliderImage"
-).src=
-images[current];
-
-},3000);
-
-const btn =
-document.getElementById(
-"themeBtn"
-);
-
-if(localStorage.getItem("theme")==="light"){
-
-document.body.classList.add("light");
-btn.innerText="☀️";
-
-}
-
-btn.onclick=()=>{
-
-document.body.classList.toggle("light");
-
-if(document.body.classList.contains("light")){
-
-localStorage.setItem(
-"theme",
-"light"
-);
-
-btn.innerText="☀️";
-
-}else{
-
-localStorage.setItem(
-"theme",
-"dark"
-);
-
-btn.innerText="🌙";
-
-}
-
-};
-
-</script>
 
 </body>
 
 </html>
-```
